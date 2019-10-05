@@ -1,3 +1,7 @@
+import mysql.connector as con
+
+mydb = None
+
 def connection():
 	global mydb
 
