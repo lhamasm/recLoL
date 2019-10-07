@@ -3,6 +3,7 @@ import mysql.connector as con
 from bs4 import BeautifulSoup
 
 mydb = None
+bs = None
 
 def connection():
 	global mydb
@@ -58,6 +59,8 @@ def getSkill(skill_name):
 	return descricao_skill
 
 if __name__ == '__main__':
+	global bs 
+	
 	champs = []
 
 	champions = retriveChampions()
