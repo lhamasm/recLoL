@@ -42,6 +42,8 @@ def saveSkills(skills):
 	print(mycursor.rowcount, "foram inseridos")
 
 def getSkill(skill_name):
+	global bs
+	
 	skill = bs.find('div', class_=skill_name)
 	skill = skill.find('div')
 	skill = skill.find('div')
