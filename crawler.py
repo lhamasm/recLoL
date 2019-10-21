@@ -10,7 +10,7 @@ def connection():
 
 	mydb = con.connect(user='root', password='doremifasol', host='localhost', database='recsys_db')
 
-def retriveChampions():
+def retrieveChampions():
 	global mydb
 
 	if mydb is None:
@@ -60,12 +60,10 @@ def getSkill(skill_name):
 
 	return descricao_skill
 
-if __name__ == '__main__':
-	global bs 
-	
+if __name__ == '__main__':	
 	champs = []
 
-	champions = retriveChampions()
+	champions = retrieveChampions()
 	for champion in champions:
 		print(champion[1])
 
