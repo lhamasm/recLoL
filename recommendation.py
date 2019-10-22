@@ -223,13 +223,13 @@ if __name__ == '__main__':
 				sim = similarity(a, b)
 				score = tagsScore(a, b)
 				abilities_sim = abilitiesSimilarity(a, b)
-				total = sim
+				total = abilities_sim + score - (sim/100.0)
 
 				r.append({
 					'id': b[0], 
 					'similarity': sim, 
 					'score': score,
-					'abilities': abilities_sim + score - (sim/100.0), 
+					'abilities': abilities_sim, 
 					'total': total
 				})
 
